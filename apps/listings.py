@@ -8,7 +8,7 @@ def app():
     st.title("Airbnb Listings Map")
 
     # Load Airbnb data with latitude, longitude, name, and price
-    data = pd.read_csv("data/listings_clean.csv", usecols=["latitude", "longitude", "name", "price"])
+    data = pd.read_csv(r"https://github.com/HassanAli99/Airbnb_listings_Amsterdam/tree/master/apps/data/listings_clean.csv")
 
     # Create a Leafmap with OpenStreetMap tiles
     m = leafmap.Map(tiles="OpenStreetMap")
