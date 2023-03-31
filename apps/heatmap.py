@@ -3,10 +3,9 @@ import leafmap.foliumap as leafmap
 
 
 def app():
+    filepath = "https://raw.githubusercontent.com/giswqs/leafmap/master/examples/data/us_cities.csv"
 
     st.title("Heatmap")
-
-    filepath = "data/listings_clean.csv"
     m = leafmap.Map(tiles="stamentoner")
     m.add_heatmap(
         filepath,

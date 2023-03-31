@@ -2,6 +2,11 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 from apps import home, heatmap, upload, listings # import your app modules here
 
+import os
+
+print(os.getcwd())  # Print the current working directory
+print(os.listdir("apps/data"))  # List the files in the data directory
+
 
 st.set_page_config(page_title="Streamlit Geospatial", layout="wide")
 
@@ -11,7 +16,6 @@ st.set_page_config(page_title="Streamlit Geospatial", layout="wide")
 apps = [
     {"func": home.app, "title": "Home", "icon": "house"},
     {"func": heatmap.app, "title": "Heatmap", "icon": "map"},
-    {"func": upload.app, "title": "Upload", "icon": "cloud-upload"},
     {"func": listings.app, "title": "Airbnb listings", "icon": "house"},
 ]
 
